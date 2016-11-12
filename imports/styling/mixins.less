@@ -1,0 +1,62 @@
+@import '../styling/colors';
+
+.outerContainer {
+  height: 100%;
+  width: 100%;
+  background-color: @primaryBackgroundColor;
+}
+
+.header {
+  text-align: center;
+  color: @secondaryTextColor;
+  background-color: @secondaryBackgroundColor;
+  padding-bottom: 0.5rem;
+  min-width: 400px;
+  text-transform: uppercase;
+  margin-top: auto;
+  padding-top: 0.5rem;
+  margin-bottom: 0.4rem;
+
+  &--iconBar {
+    color: @primaryTextColor;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin-top: 75%;
+    margin-bottom: 0;
+    background-color: @primaryButtonColor;
+    z-index: 0;
+    padding: 1rem 0;
+  }
+}
+
+.hover {
+  opacity: 0.098032;
+
+}
+
+.innerContainer {
+
+  &--iconBar {
+    transform: translateX(200%);  
+
+    &--hideContent {
+      animation: invisible 1s forwards !important;
+      animation-timing-function: cubic-bezier(1,0.1,1,-0.11)
+    }
+  }
+}
+
+@keyframes invisible {
+  0% {
+    transform: translateX(200%);
+  }
+
+  90% {
+    transform: translateX(200%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
